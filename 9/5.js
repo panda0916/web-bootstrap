@@ -20,6 +20,13 @@ colors.reverse()
 let a = colors.slice()
 // 複製陣列頭到尾但是不包含尾
 colors.slice(1,2)
+// 刪除陣列第幾個索引跟後幾個 0=不刪除任何東西直接插入
+colors.splice(0,2);
+// 第一個索引是插入位置 第二個是刪除或不刪除 第三個是插入內容
+colors.splice(0,0,'123');
+// 隨機排序
+colors.sort();
+
 
 
 // 陣列組合
