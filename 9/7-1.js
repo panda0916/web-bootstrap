@@ -1,52 +1,58 @@
 // // 循環公式
-// for(let i= 1; i<=10; i++){
-//     console.log(i);
-// }
+for(let i= 1; i<=10; i++){
+    console.log(i);
+}
 // // 偶數增加
-// for(let i= 0; i<=20; i += 2){
-//     console.log(i);
-// }
+for(let i= 0; i<=20; i += 2){
+    console.log(i);
+}
 // // 一個一個打印出自串索引內容
-// for(let i = 0; i<字串.length; i ++){
-//     console.log(i,字串[i])
-// }
+for(let i = 0; i<字串.length; i ++){
+    console.log(i,字串[i])
+}
 // // 反過來呈現
-// for(let i = 字串.length; i >= 0; i --){
-//     console.log(i,字串[i])
+for(let i = 字串.length; i >= 0; i --){
+    console.log(i,字串[i])
 // }
-// // 索引字串
-// const seatingChart =[
-//     ['Kristen', 'Erik', 'Namita'],
-//     ['Geoffrey', 'Juanita', 'Antonio', 'Kevin'],
-//     ['Yuma', 'Sakura', 'Jack', 'Erika']
-// ]
-// // 一個一個人名顯示出來
-// for(let i =0; i < seatingChart.length; i++){
-//     const row = seatingChart[i];
-//     console.log(`ROW #${i + 1}`)
-//     for(let j = 0; j < row.length; j++){
-//         console.log(row[j])
-//     }
+// 索引字串
+const seatingChart =[
+    ['Kristen', 'Erik', 'Namita'],
+    ['Geoffrey', 'Juanita', 'Antonio', 'Kevin'],
+    ['Yuma', 'Sakura', 'Jack', 'Erika']
+]
+// 一個一個人名顯示出來
+for(let i =0; i < seatingChart.length; i++){
+    const row = seatingChart[i];
+    console.log(`ROW #${i + 1}`)
+    for(let j = 0; j < row.length; j++){
+        console.log(row[j])
+    }
+}
+// 新寫法
+for(let row of seatingChart){
+    for(let student of row){
+        console.log(student)
+    }
+}
+// while 0-9
+let count = 0
+while(count < 10){
+    console.log(count)
+    count ++;
 // }
-// // while 0-9
-// let count = 0
-// while(count < 10){
-//     console.log(count)
-//     count ++;
-// }
-// // 0-10
-// let count = 0
-// while(count < 10){
-//     count ++;
-//     console.log(count)
+// 0-10
+let count = 0
+while(count < 10){
+    count ++;
+    console.log(count)
 // }
 // prompt通常用來收集數據 
-// const pss = "baby"
-// let pasd = prompt("輸入密碼");
-// while(pasd != pss){
-//     pasd = prompt('密碼錯誤重新輸入');
-// }
-//     console.log("密碼正確")
+const pss = "baby"
+let pasd = prompt("輸入密碼");
+while(pasd != pss){
+    pasd = prompt('密碼錯誤重新輸入');
+}
+    console.log("密碼正確")
 
 
 //     您是一位學校教師，您想要根據學生的分數將其分為五個等級：A, B, C, D, 和 F。
@@ -108,32 +114,35 @@ const studentsData = [
 function calculateStudentScore(data) {
     for (let i = 0; i < data.length; i++) {
         let student = data[i]
-        if (student.isExtra === true) {
-            student.score += 5
+        if (student['isExtra']) {
+            student['score'] += 5
         }
-        if (student.lateTimes >= 3) {
-            student.score -= 5
+        if (student['lateTimes'] >= 3) {
+            student['score'] -= 5
         }
         switch (true) {
-            case student.score > 90:
+            case student['score'] >= 90:
                 student['grade'] = 'A';
                 break;
-            case student.score < 90 == student.score >= 80:
+            case student.score < 90 && student.score >= 80:
                 student['grade'] = 'B';
                 break;
-            case student.score < 80 == student.score >= 70:
+            case student.score < 80 && student.score >= 70:
                 student['grade'] = 'C';
                 break;
-            case student.score < 70 == student.score >= 60:
+            case student.score < 70 && student.score >= 60:
                 student['grade'] = 'D';
                 break;
-            case student.score < 60 == student.score >= 0:
+            case student.score < 60 :
                 student['grade'] = 'F';
                 break;
         }
         console.log(data[i])
     }
 }
-// use 
+
+// use
 calculateStudentScore(studentsData);
-// console.log(studentsData);
+console.log(studentsData);
+
+
