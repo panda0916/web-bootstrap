@@ -4,5 +4,5 @@ const num = scroes[0]
 // 顯示出來num1是2
 const num1 = scroes[1]
 // 更簡短的寫法
-const [num, num1, num2] =scores;
-// 顯示出來是 num=1 num1=2 num2=3
+const [num, num1, num2, ...total] =scores;
+// 顯示出來是 num=1 num1=2 num2=3 ...total後面全部的
