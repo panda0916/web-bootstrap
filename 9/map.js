@@ -2,8 +2,9 @@ const texts = ['rofl', 'lol', 'omg', 'ttyl'];
 const caps = texts.map(function(t){
     return t.toLowerCase();
 })
-// texts;['rofl', 'lol', 'omg', 'ttyl']
-// caps;['ROFL', 'LOL', 'OMG', 'TTYL']
+console.log(caps)
+texts;['rofl', 'lol', 'omg', 'ttyl']
+caps;['ROFL', 'LOL', 'OMG', 'TTYL']
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 // 可以代入數字全部X2

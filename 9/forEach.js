@@ -18,3 +18,4 @@ numbers.forEach(function(el){
     }
 })
 
+// forEach 一個一個放進去(要做甚麼)
