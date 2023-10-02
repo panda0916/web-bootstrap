@@ -20,5 +20,5 @@ const comments =[
     {username: 'Fishboy' , text: 'glub glub' , votes: 1235 }
 ]
 // 輸入索引
-comments[1] 會跑出 username: 'Fishboy' , text: 'glub glub' , votes: 1235
-comments[1].text 會跑出 'glub glub'
+// comments[1] 會跑出 username: 'Fishboy' , text: 'glub glub' , votes: 1235
+// comments[1].text 會跑出 'glub glub'
